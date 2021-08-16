@@ -1,4 +1,4 @@
-module.exports = function toReadable (number) {
+module.exports = function toReadable (num) {
     if (num == 0) {
         return 'zero'
     };
@@ -58,7 +58,10 @@ module.exports = function toReadable (number) {
                 num -= upRest;
             };
         case 1:
-            answer += `${dictToNine[downRest]}`;
+            answer += `${dictToNine[num]}`;
     }
+    // console.log(answer)
     return answer;
+
 };
+// toReadable(1);
