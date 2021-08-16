@@ -51,6 +51,7 @@ module.exports = function toReadable (num) {
             }
             if (num % 10 == 0) {
                 answer += `${dictToNinety[num]}`;
+                num -= num;
             } else {
                 downRest = num % 10;
                 upRest = num - downRest;
