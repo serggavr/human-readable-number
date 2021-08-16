@@ -46,7 +46,7 @@ module.exports = function toReadable (num) {
             answer += `${dictToNine[upRest]} hundred `;
             num -= (upRest * 100);
         case 2:
-            if (num > 10) {
+            if (num >= 10) {
                 if (num < 20) {
                     answer += `${dictToNineteen[num]}`;
                     break;
