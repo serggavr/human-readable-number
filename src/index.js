@@ -46,18 +46,20 @@ module.exports = function toReadable (num) {
             answer += `${dictToNine[upRest]} hundred `;
             num -= (upRest * 100);
         case 2:
-            if (num < 20) {
-                answer += `${dictToNineteen[num]}`;
-                break;
-            }
-            if (num % 10 == 0) {
-                answer += `${dictToNinety[num]}`;
-                num -= num;
-            } else {
-                downRest = num % 10;
-                upRest = num - downRest;
-                answer += `${dictToNinety[upRest]} `;
-                num -= upRest;
+            if (num > 10) {
+                if (num < 20) {
+                    answer += `${dictToNineteen[num]}`;
+                    break;
+                }
+                if (num % 10 == 0) {
+                    answer += `${dictToNinety[num]}`;
+                    num -= num;
+                } else {
+                    downRest = num % 10;
+                    upRest = num - downRest;
+                    answer += `${dictToNinety[upRest]} `;
+                    num -= upRest;
+                }
             };
         case 1:
             if (num == 0) {break}
