@@ -58,6 +58,7 @@ module.exports = function toReadable (num) {
                 num -= upRest;
             };
         case 1:
+            if (num == 0) {break}
             answer += `${dictToNine[num]}`;
     }
     // console.log(answer)
