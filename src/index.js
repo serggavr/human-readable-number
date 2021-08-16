@@ -48,6 +48,7 @@ module.exports = function toReadable (num) {
         case 2:
             if (num < 20) {
                 answer += `${dictToNineteen[num]}`;
+                break;
             }
             if (num % 10 == 0) {
                 answer += `${dictToNinety[num]}`;
